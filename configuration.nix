@@ -123,6 +123,7 @@
     radeontools
     radeon-profile
     x11vnc
+    gimp
     gasket       
   ];
 

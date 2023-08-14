@@ -15,11 +15,28 @@
   # release notes.
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
+  programs.gpg = {
+    enable = true;
+  };
+  
+  services.gpg-agent = {
+    enable = true;
+    pinentryFlavor = "qt";
+  };
+
+
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     vlc
-  #  amdgpu_top
+    git
+    git-crypt
+    gnupg
+    obs-studio
+    pinentry_qt
+
+ #  amdgpu_top
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
